@@ -11,7 +11,7 @@ app = Flask('__main__')
 
 @app.route("/")
 def homepage():
-    return APIKEY
+    return "<h1>Welcome to uText! This project is a work in progress please check back later to experience the complete product.</h1>"
 
 if __name__ == "__main__":
     app.run(debug=True)

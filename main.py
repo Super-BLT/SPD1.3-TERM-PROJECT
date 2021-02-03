@@ -26,8 +26,6 @@ def saveurl(url):
         new_file.close()
         return send_file(filename, as_attachment=True), os.remove(filename)
     
-        
-
     return render_template('temp.html')
 if __name__ == "__main__":
     app.run(debug=True)

@@ -12,8 +12,10 @@ BRENNER:
 
 TIAN: YeS!
 
-## Getting Started
+Lon:
 
+## Getting Started
+* Clone or Pull this Repo to make sure you are up to date.
 * create a virtual enviornment
     1. *python3 -m venv env*
     2. *source env/bin/activate*

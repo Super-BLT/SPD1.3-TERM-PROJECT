@@ -18,7 +18,7 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 
-@app.route("/lyrics")
+@app.route("/subtitles")
 def define():
 
     url = "https://subtitles-for-youtube.p.rapidapi.com/subtitles/_1y6bpdT3a4"

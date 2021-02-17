@@ -1,4 +1,4 @@
-# SPD1.3-TERM-PROJECT
+# UText
 
 ## Youtube Video Transcriptalizer
 

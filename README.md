@@ -2,20 +2,26 @@
 
 ## Youtube Video Transcriptalizer
 
-The project is a work in Progress an this file will be updated often to ensure an accurate description of this project.
+This site is intended to be used as a way for a video from Youtube.com to be read in situations where watching a video is impossible or not desired.
 
-### PLEASE ENSURE YOU CAN PUSH TO THIS REPO BELOW
+## Using The Site
 
-SHAUN: YES
+Using the site is simple.
 
-BRENNER:
+![image](./static/Search.png)
 
-TIAN: YeS!
+* Enter the URL of a YouTube video in the search bar.
 
-Lon:
+* Press the "Submit" button
 
-## Getting Started
+* Read On!!
+
+![image](./static/Captions.png)
+
+## Getting Started (Contributing)
+
 * Clone or Pull this Repo to make sure you are up to date.
+
 * create a virtual enviornment
     1. *python3 -m venv env*
     2. *source env/bin/activate*
@@ -28,3 +34,13 @@ Lon:
     2. Format the contents of the new file following .env
 
 * to run server type *python3 main.py*
+
+### PLEASE ENSURE YOU CAN PUSH TO THIS REPO BELOW
+
+SHAUN: YES
+
+BRENNER:
+
+TIAN: YeS!
+
+Lon:

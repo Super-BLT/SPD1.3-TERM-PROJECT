@@ -12,7 +12,9 @@ def find_subtitles(video_id):
         'x-rapidapi-key': APIKEY,
         'x-rapidapi-host': "subtitles-for-youtube.p.rapidapi.com"
         }
-    response = requests.request("GET", url, headers=headers)
+    params = {'lang':"EN"}
+    
+    response = requests.request("GET", url, headers=headers, params=params)
     return response.json()
 
 def clean_subtitles(json_response):

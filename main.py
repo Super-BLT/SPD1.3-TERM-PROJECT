@@ -14,11 +14,17 @@ app = Flask('__main__')
 def homepage():
     url = request.args.get("video-url")
     video_code = ''
+    context = {
+        'captions':''
+    }
     if url:
         split_url = url.split("?v=")
         video_code = split_url[1]
-
-    return render_template("index.html")
+        captions_dirty = find_subtitles(video_code)
+        captions_clean = clean_subtitles(captions_dirty)
+        context['captions'] = captions_clean
+    
+    return render_template("index.html",**context)
 
 @app.route("/save",methods=["GET","POST"])
 def saveurl():

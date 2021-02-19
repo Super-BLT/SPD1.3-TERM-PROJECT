@@ -15,7 +15,8 @@ def homepage():
     url = request.args.get("video-url")
     video_code = ''
     context = {
-        'captions':''
+        'captions':'',
+        'video_url':''
     }
     if url:
         split_url = url.split("?v=")
@@ -23,6 +24,7 @@ def homepage():
         captions_dirty = find_subtitles(video_code)
         captions_clean = clean_subtitles(captions_dirty)
         context['captions'] = captions_clean
+        context['video_url'] = url
     
     return render_template("index.html",**context)
 

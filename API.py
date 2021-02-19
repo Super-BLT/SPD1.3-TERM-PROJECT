@@ -16,10 +16,9 @@ def find_subtitles(video_id):
     return response.json()
 
 def clean_subtitles(json_response):
-    print(json_response)
     text = ''
     for index in json_response:
-       print(index)
        text += index['text']
+       text += ' '
     return text
 

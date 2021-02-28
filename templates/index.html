@@ -38,12 +38,25 @@
         </div>
         <div class="col"></div>
       </div>
+      <div class="justify-content-center w-100 d-flex">
+        <div class="embed-responsive embed-responsive-16by9 ">
+          <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/{{video_code}}?rel=0" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
-
+    
     <div class="container-fluid"" style="display: flex; flex-direction:column;   padding: 5% 15% 0% 15%;">
-      <b style="width: 100%; border-bottom: 1px solid black;">Captions</b>   
-      <p style="width: 100%; border-bottom: 1px solid black;">
-        {{captions|safe}}
+      <div class="px-0 m-0 d-flex" style="width: 100%; border-bottom: 1px solid black;">
+        <b class="flex-grow-1 align-self-end">Captions</b>
+        <form action="{{url_for('saveurl')}}" class="mr-2" method="POST">
+          <input type="hidden" name="video-url" value="{{video_url}}">  
+          <button class="btn btn-dark px-1 py-0 mb-1 ">Save</button>
+        </form>   
+      </div>
+      <p style="width: 100%; border-bottom: 1px solid black;" class="px-5">
+        {% for caption in captions%}
+          <p>{{caption|safe}}</p>
+        {% endfor %}
       </p>
     </div>
     

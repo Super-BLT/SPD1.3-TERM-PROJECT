@@ -19,8 +19,23 @@ def find_subtitles(video_id):
 
 def clean_subtitles(json_response):
     text = ''
+    counter = 0 
+    text_list = list()
     for index in json_response:
-       text += index['text']
-       text += ' '
-    return text
+        if counter < 30 and index != json_response[-1]:    
+            text += index['text']
+            text += ' '
+            counter += 1
+        elif index == json_response[-1]:
+            text += index['text']
+            text += ' '
+            text_list.append(text)
+        
+        else:
+            text += index['text']
+            text += ' '
+            text_list.append(text) 
+            counter = 0
+            text = ''
+    return text_list
 

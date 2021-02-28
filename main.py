@@ -16,7 +16,8 @@ def homepage():
     video_code = ''
     context = {
         'captions':'',
-        'video_url':''
+        'video_url':'',
+        'video_code':''
     }
     if url:
         split_url = url.split("?v=")
@@ -25,6 +26,7 @@ def homepage():
         captions_clean = clean_subtitles(captions_dirty)
         context['captions'] = captions_clean
         context['video_url'] = url
+        context['video_code'] = video_code
     
     return render_template("index.html",**context)
 
@@ -43,7 +45,8 @@ def saveurl():
         filename=f'{video_code}Transcript.txt'
         captions= clean_subtitles(find_subtitles(video_code))
         new_file = open(filename,"x")
-        new_file.write(captions)
+        for text in captions:
+            new_file.writelines(text)
         new_file.close()
         return send_file(filename, as_attachment=True), os.remove(filename)
     

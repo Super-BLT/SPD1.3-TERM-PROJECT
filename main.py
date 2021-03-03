@@ -8,7 +8,7 @@ load_dotenv()
 APIKEY = os.environ.get("APIKEY")
 
 
-app = Flask('__main__', template_folder='./templates')
+app = Flask('__main__')
 
 @app.route("/")
 def homepage():
@@ -28,7 +28,7 @@ def homepage():
         context['video_url'] = url
         context['video_code'] = video_code
     
-    return render_template("index.html",**context)
+    return render_template('index.html',**context)
 
 @app.route("/save",methods=["GET","POST"])
 def saveurl():

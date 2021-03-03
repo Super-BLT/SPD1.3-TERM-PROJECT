@@ -30,7 +30,6 @@ def clean_subtitles(json_response):
             text += index['text']
             text += ' '
             text_list.append(text)
-        
         else:
             text += index['text']
             text += ' '

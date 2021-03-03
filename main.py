@@ -8,7 +8,7 @@ load_dotenv()
 APIKEY = os.environ.get("APIKEY")
 
 
-app = Flask('__main__')
+app = Flask(__name__)
 
 @app.route("/")
 def homepage():

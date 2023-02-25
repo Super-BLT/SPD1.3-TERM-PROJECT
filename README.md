@@ -18,7 +18,7 @@ Using the site is simple.
 
 ![image](./static/Captions.png)
 
-## Getting Started (Contributing)
+## Getting Started
 
 * Clone or Pull this Repo to make sure you are up to date.
 
@@ -34,13 +34,3 @@ Using the site is simple.
     2. Format the contents of the new file following .env
 
 * to run server type *python3 main.py*
-
-### PLEASE ENSURE YOU CAN PUSH TO THIS REPO BELOW
-
-SHAUN: YES
-
-BRENNER:
-
-TIAN: YeS!
-
-Lon:
